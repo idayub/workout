@@ -100,6 +100,24 @@ blockquote{
 .icon-btn.danger{color:var(--red);font-size:13px;font-weight:700;width:auto;padding:0 12px}
 .icon-btn.danger:hover{border-color:var(--red);background:#fdeaea}
 
+/* ===== Seletor de descanso ===== */
+.rest-picker{
+  display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+  background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:12px 14px;margin-top:14px;
+}
+.rest-picker .label{font-size:13px;font-weight:800;color:var(--muted);margin-right:2px}
+.rest-chip{
+  border:2px solid var(--border);background:#fff;color:var(--muted);
+  border-radius:999px;padding:7px 14px;font-weight:700;font-size:13px;
+  cursor:pointer;transition:.15s;
+}
+.rest-chip:hover{border-color:var(--blue-2);color:var(--blue)}
+.rest-chip.active{
+  background:var(--blue);border-color:var(--blue);color:#fff;
+  box-shadow:0 4px 12px rgba(13,71,161,.25);
+}
+
 /* ===== Grade de dias ===== */
 .days-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-top:18px}
 @media(min-width:600px){.days-grid{grid-template-columns:1fr 1fr}}
@@ -180,7 +198,7 @@ blockquote{
 #rest-time{font-family:'Oswald';font-weight:700;font-size:76px;color:var(--blue);line-height:1;margin:10px 0 4px;font-variant-numeric:tabular-nums}
 .overlay.finished #rest-time{color:var(--gold)}
 #rest-status{font-size:14px;color:var(--muted);font-weight:600}
-.rest-sub{font-size:12px;color:#b7c1d4;margin-top:4px;font-style:italic}
+.rest-sub{font-size:12px;color:#9aa8c2;margin-top:4px;font-style:italic}
 .rest-actions{display:flex;gap:10px;margin-top:22px}
 .rest-actions .btn{flex:1}
 
@@ -260,6 +278,12 @@ footer b{color:var(--blue)}
     <span id="session-count">0/0 séries</span>
   </div>
 
+  <!-- Seletor de tempo de descanso -->
+  <div class="rest-picker">
+    <span class="label">⏱ Descanso:</span>
+    <span id="rest-options"></span>
+  </div>
+
   <div id="exercise-list"></div>
 
   <div class="action-bar">
@@ -273,7 +297,7 @@ footer b{color:var(--blue)}
     <h3>Descanso</h3>
     <div id="rest-time">01:00</div>
     <p id="rest-status">Respire. Hidrate-se.</p>
-    <p class="rest-sub">Seu fator de cura está em ação.</p>
+    <p class="rest-sub" id="rest-sub">Seu fator de cura está em ação.</p>
     <div class="rest-actions">
       <button class="btn btn-gold" id="btn-add15">+15s</button>
       <button class="btn btn-primary" id="btn-skip">Pular</button>
@@ -352,10 +376,11 @@ const WORKOUTS = {
   }
 };
 const DAYS = ['A','B','C','D'];
+const REST_OPTIONS = [30,45,60,90,120]; // segundos
 const STORE_KEY = 'xmen-abcd-treino';
 
 /* ================= ESTADO ================= */
-let state = { week:{A:false,B:false,C:false,D:false}, session:null };
+let state = { week:{A:false,B:false,C:false,D:false}, session:null, restTime:60 };
 let restTimer = null, restRemaining = 0, lastCompletedDay = null;
 const $ = id => document.getElementById(id);
 
@@ -367,6 +392,7 @@ function loadState(){
     const s = JSON.parse(raw);
     if(s && s.week) state.week = Object.assign(state.week, s.week);
     if(s && s.session && WORKOUTS[s.session.day]) state.session = s.session;
+    if(s && REST_OPTIONS.includes(s.restTime)) state.restTime = s.restTime;
   }catch(e){}
 }
 function buildDone(day){ return WORKOUTS[day].exercises.map(e=>Array(e.sets).fill(false)); }
@@ -378,11 +404,37 @@ function currentTarget(done){
       if(!done[i][j]) return {i,j};
   return null;
 }
+function fmtClock(sec){
+  const r = Math.max(sec,0);
+  return String(Math.floor(r/60)).padStart(2,'0') + ':' + String(r%60).padStart(2,'0');
+}
+function fmtLabel(sec){ return sec%60===0 ? (sec/60)+'min' : sec+'s'; }
 function show(screen){
   ['screen-home','screen-workout','screen-complete'].forEach(id=>{
     $(id).hidden = id!==screen;
   });
   window.scrollTo({top:0});
+}
+
+/* ================= SELETOR DE DESCANSO ================= */
+function renderRestPicker(){
+  const box = $('rest-options');
+  box.innerHTML = '';
+  REST_OPTIONS.forEach(sec=>{
+    const b = document.createElement('button');
+    b.className = 'rest-chip' + (state.restTime===sec ? ' active' : '');
+    b.textContent = fmtLabel(sec);
+    b.onclick = ()=>{
+      state.restTime = sec;
+      save();
+      renderRestPicker();
+      updateRestSub();
+    };
+    box.appendChild(b);
+  });
+}
+function updateRestSub(){
+  $('rest-sub').textContent = 'Descanso de ' + fmtLabel(state.restTime) + ' · Seu fator de cura está em ação.';
 }
 
 /* ================= TELA INICIAL ================= */
@@ -432,6 +484,8 @@ function openWorkout(day){
   }
   save();
   renderWorkout();
+  renderRestPicker();
+  updateRestSub();
   show('screen-workout');
 }
 
@@ -513,8 +567,9 @@ function finishWorkout(){
 /* ================= DESCANSO ================= */
 function startRest(){
   stopRest();
-  restRemaining = 60;
+  restRemaining = state.restTime;
   $('rest-status').textContent = 'Respire. Hidrate-se.';
+  updateRestSub();
   $('rest-overlay').classList.remove('finished');
   $('rest-overlay').hidden = false;
   renderRestTime();
@@ -529,12 +584,7 @@ function startRest(){
     renderRestTime();
   },1000);
 }
-function renderRestTime(){
-  const r = Math.max(restRemaining,0);
-  const m = String(Math.floor(r/60)).padStart(2,'0');
-  const s = String(r%60).padStart(2,'0');
-  $('rest-time').textContent = m + ':' + s;
-}
+function renderRestTime(){ $('rest-time').textContent = fmtClock(restRemaining); }
 function stopRest(){ if(restTimer){ clearInterval(restTimer); restTimer = null; } }
 function hideRest(){ stopRest(); $('rest-overlay').hidden = true; }
 function restFinished(){
