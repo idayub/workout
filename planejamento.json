@@ -1,0 +1,482 @@
+{
+  "segunda": {
+    "title": "Treino A: Peito, Ombros e Tríceps",
+    "subtitle": "Início da semana com foco em empurrar, densidade peitoral e deltoides.",
+    "exercises": [
+      {
+        "name": "Supino Inclinado com Halteres",
+        "sets": 4,
+        "reps": "6–10",
+        "rir": 1,
+        "rest": 180,
+        "technique": "Pirâmide crescente",
+        "cadence": "3-1-1-0",
+        "tip": "Pirâmide crescente: Aumente o peso dos halteres a cada série, diminuindo o número de repetições."
+      },
+      {
+        "name": "Supino Reto Máquina Articulada",
+        "sets": 4,
+        "reps": "8–12",
+        "rir": 1,
+        "rest": 150,
+        "technique": "Top set + back-off",
+        "cadence": "3-0-1-1",
+        "tip": "Top set + back-off: Faça a primeira série pesada até quase falhar. Reduza a carga em 20% para as 3 séries seguintes."
+      },
+      {
+        "name": "Crossover Polia Média",
+        "sets": 3,
+        "reps": "12–15",
+        "rir": 0,
+        "rest": 90,
+        "technique": "Drop Set",
+        "cadence": "2-0-2-1",
+        "tip": "Drop Set: Na última série, vá até a falha. Reduza o peso em 20% e faça até a falha de novo, sem descansar."
+      },
+      {
+        "name": "Voador (Peck Deck)",
+        "sets": 3,
+        "reps": "10–12",
+        "rir": 0,
+        "rest": 90,
+        "technique": "Rest-Pause",
+        "cadence": "2-1-2-1",
+        "tip": "Rest-Pause: Na última série, vá até a falha, descanse 10 segundos na máquina e faça mais repetições até travar."
+      },
+      {
+        "name": "Desenvolvimento com Halteres",
+        "sets": 4,
+        "reps": "8–10",
+        "rir": 1,
+        "rest": 120,
+        "technique": "Padrão.",
+        "cadence": "3-0-1-0",
+        "tip": "Padrão."
+      },
+      {
+        "name": "Elevação Lateral com Halteres",
+        "sets": 4,
+        "reps": "12–20",
+        "rir": 0,
+        "rest": 75,
+        "technique": "Drop Set",
+        "cadence": "2-0-2-0",
+        "tip": "Drop Set: Na última série, falhe, reduza o peso e falhe de novo imediatamente."
+      },
+      {
+        "name": "Tríceps Testa na Polia (Corda)",
+        "sets": 4,
+        "reps": "10–15",
+        "rir": 1,
+        "rest": 90,
+        "technique": "Padrão.",
+        "cadence": "3-0-1-1",
+        "tip": "Padrão."
+      },
+      {
+        "name": "Tríceps Francês Unilateral",
+        "sets": 3,
+        "reps": "10–12",
+        "rir": 0,
+        "rest": 90,
+        "technique": "Padrão.",
+        "cadence": "2-1-1-0",
+        "tip": "Padrão."
+      },
+      {
+        "name": "Tríceps Pulldown (Barra V)",
+        "sets": 3,
+        "reps": "12–15",
+        "rir": 0,
+        "rest": 90,
+        "technique": "Isometria",
+        "cadence": "2-0-1-2",
+        "tip": "Isometria: Segure a barra embaixo por 2 segundos inteiros a cada repetição apertando o tríceps."
+      }
+    ]
+  },
+  "terca": {
+    "title": "Treino B: Costas, Bíceps e Panturrilhas",
+    "subtitle": "Puxadas de alta intensidade, espessura dorsal e flexão plantar pesada.",
+    "exercises": [
+      {
+        "name": "Puxada Alta Pegada Aberta",
+        "sets": 4,
+        "reps": "8–12",
+        "rir": 1,
+        "rest": 120,
+        "technique": "Padrão.",
+        "cadence": "3-0-1-1",
+        "tip": "Padrão."
+      },
+      {
+        "name": "Remada Curvada com Halteres",
+        "sets": 4,
+        "reps": "6–10",
+        "rir": 1,
+        "rest": 150,
+        "technique": "Pirâmide crescente",
+        "cadence": "2-0-1-1",
+        "tip": "Pirâmide crescente: Aumente o peso a cada série, diminuindo as repetições."
+      },
+      {
+        "name": "Remada Articulada Unilateral",
+        "sets": 3,
+        "reps": "10–15",
+        "rir": 0,
+        "rest": 120,
+        "technique": "Pico de contração",
+        "cadence": "3-0-1-1",
+        "tip": "Pico de contração: Segure a carga no ponto máximo de puxada por 1 segundo inteiro."
+      },
+      {
+        "name": "Pulldown com Corda Polia Alta",
+        "sets": 3,
+        "reps": "12–15",
+        "rir": 0,
+        "rest": 90,
+        "technique": "Rest-Pause",
+        "cadence": "3-0-1-1",
+        "tip": "Rest-Pause: Na última série, falhe, respire 10 segundos e faça repetições extras até a falha."
+      },
+      {
+        "name": "Rosca Direta com Barra",
+        "sets": 4,
+        "reps": "8–12",
+        "rir": 1,
+        "rest": 120,
+        "technique": "Padrão.",
+        "cadence": "3-0-1-0",
+        "tip": "Padrão."
+      },
+      {
+        "name": "Rosca Martelo com Halteres",
+        "sets": 3,
+        "reps": "10–15",
+        "rir": 1,
+        "rest": 90,
+        "technique": "Padrão.",
+        "cadence": "2-0-1-0",
+        "tip": "Padrão."
+      },
+      {
+        "name": "Rosca Scott Máquina",
+        "sets": 3,
+        "reps": "10–12",
+        "rir": 0,
+        "rest": 90,
+        "technique": "Drop Set",
+        "cadence": "3-1-1-1",
+        "tip": "Drop Set: Na última série, vá até a falha. Tire 20% do peso e falhe de novo sem descanso."
+      },
+      {
+        "name": "Panturrilha em Pé Máquina",
+        "sets": 5,
+        "reps": "10–15",
+        "rir": 0,
+        "rest": 90,
+        "technique": "Pausa no alongamento",
+        "cadence": "2-2-1-1",
+        "tip": "Pausa no alongamento: Desça o calcanhar e segure alongando por 2 segundos antes de subir."
+      },
+      {
+        "name": "Panturrilha no Leg Press",
+        "sets": 4,
+        "reps": "12–20",
+        "rir": 0,
+        "rest": 90,
+        "technique": "Rest-Pause",
+        "cadence": "2-1-1-1",
+        "tip": "Rest-Pause: Na última série, falhe, descanse 10s e falhe novamente."
+      }
+    ]
+  },
+  "quarta": {
+    "title": "Treino C: Braços, Deltoide Posterior e Panturrilhas",
+    "subtitle": "Super-compensação de bíceps, tríceps e deltoides posteriores.",
+    "exercises": [
+      {
+        "name": "Rosca Inclinada com Halteres",
+        "sets": 4,
+        "reps": "10–12",
+        "rir": 1,
+        "rest": 90,
+        "technique": "Padrão.",
+        "cadence": "3-1-1-0",
+        "tip": "Padrão."
+      },
+      {
+        "name": "Rosca Concentrada",
+        "sets": 3,
+        "reps": "10–12",
+        "rir": 1,
+        "rest": 90,
+        "technique": "Padrão.",
+        "cadence": "2-0-1-1",
+        "tip": "Padrão."
+      },
+      {
+        "name": "Rosca Aranha (Spider Curl)",
+        "sets": 3,
+        "reps": "12–15",
+        "rir": 0,
+        "rest": 90,
+        "technique": "Myo-Reps",
+        "cadence": "2-0-1-1",
+        "tip": "Myo-Reps: Faça a série até perto da falha. Respire 5 vezes e faça 3 a 5 reps. Repita até falhar."
+      },
+      {
+        "name": "Tríceps Supinado (Polia/Cabo)",
+        "sets": 4,
+        "reps": "10–12",
+        "rir": 1,
+        "rest": 90,
+        "technique": "Padrão.",
+        "cadence": "2-0-1-1",
+        "tip": "Padrão."
+      },
+      {
+        "name": "Tríceps Coice Unilateral",
+        "sets": 3,
+        "reps": "12–15",
+        "rir": 1,
+        "rest": 75,
+        "technique": "Padrão.",
+        "cadence": "2-0-1-1",
+        "tip": "Padrão."
+      },
+      {
+        "name": "Mergulho em Máquina/Paralelas",
+        "sets": 3,
+        "reps": "8–12",
+        "rir": 0,
+        "rest": 120,
+        "technique": "Cluster Set",
+        "cadence": "3-1-1-0",
+        "tip": "Cluster Set: Na última série, faça repetições até quase falhar, descanse 15s e faça mais 3 a 5 repetições."
+      },
+      {
+        "name": "Crucifixo Inverso (Máquina)",
+        "sets": 4,
+        "reps": "15–20",
+        "rir": 0,
+        "rest": 90,
+        "technique": "Rest-Pause",
+        "cadence": "2-0-1-1",
+        "tip": "Rest-Pause: Na última série, vá até a falha, descanse 10 segundos e faça mais repetições até a falha."
+      },
+      {
+        "name": "Remada Alta Pegada Aberta",
+        "sets": 3,
+        "reps": "10–15",
+        "rir": 0,
+        "rest": 90,
+        "technique": "Drop Set",
+        "cadence": "2-0-1-1",
+        "tip": "Drop Set: Na última série, falhe, reduza a carga e falhe novamente."
+      },
+      {
+        "name": "Panturrilha Sentado (Solear)",
+        "sets": 5,
+        "reps": "12–20",
+        "rir": 0,
+        "rest": 90,
+        "technique": "Padrão.",
+        "cadence": "2-1-1-1",
+        "tip": "Padrão."
+      },
+      {
+        "name": "Panturrilha Unilateral com Halter",
+        "sets": 3,
+        "reps": "10–15",
+        "rir": 1,
+        "rest": 75,
+        "technique": "Padrão.",
+        "cadence": "2-1-1-1",
+        "tip": "Padrão."
+      }
+    ]
+  },
+  "quinta": {
+    "title": "Treino D: Pernas Completas (O Dia Único)",
+    "subtitle": "Treino lendário de membros inferiores: quadríceps, posteriores e glúteos.",
+    "exercises": [
+      {
+        "name": "Cadeira Extensora",
+        "sets": 4,
+        "reps": "10–12",
+        "rir": 0,
+        "rest": 90,
+        "technique": "Drop Set Duplo",
+        "cadence": "3-1-1-1",
+        "tip": "Drop Set Duplo: Na última, falhe absoluta. Tire 20%, falhe de novo. Tire 20% e falhe pela terceira vez sem descanso."
+      },
+      {
+        "name": "Leg Press 45°",
+        "sets": 4,
+        "reps": "8–10",
+        "rir": 0,
+        "rest": 180,
+        "technique": "Rest-Pause",
+        "cadence": "4-0-1-0",
+        "tip": "Rest-Pause: Na última série, trave na falha. Respire 15 segundos e faça o máximo de repetições extras."
+      },
+      {
+        "name": "Agachamento Hack",
+        "sets": 3,
+        "reps": "10–12",
+        "rir": 0,
+        "rest": 180,
+        "technique": "Cluster Set",
+        "cadence": "3-1-1-0",
+        "tip": "Cluster Set: Na última série, vá até perto da falha, descanse 15s na máquina e faça mais 4 reps."
+      },
+      {
+        "name": "Afundo Búlgaro com Halteres",
+        "sets": 3,
+        "reps": "8–12",
+        "rir": 1,
+        "rest": 120,
+        "technique": "Padrão.",
+        "cadence": "3-0-1-0",
+        "tip": "Padrão."
+      },
+      {
+        "name": "Mesa Flexora",
+        "sets": 4,
+        "reps": "8–12",
+        "rir": 0,
+        "rest": 120,
+        "technique": "Drop Set Duplo",
+        "cadence": "3-0-1-1",
+        "tip": "Drop Set Duplo: Falhe, reduza o peso 20%, falhe, reduza mais 20% e falhe uma terceira vez."
+      },
+      {
+        "name": "Cadeira Flexora",
+        "sets": 3,
+        "reps": "10–15",
+        "rir": 0,
+        "rest": 90,
+        "technique": "Myo-Reps",
+        "cadence": "2-0-1-1",
+        "tip": "Myo-Reps: Série de ativação até a falha, respire 5 vezes, faça mini-séries de 3 reps até travar de vez."
+      },
+      {
+        "name": "Stiff com Halteres",
+        "sets": 4,
+        "reps": "8–12",
+        "rir": 1,
+        "rest": 150,
+        "technique": "Padrão",
+        "cadence": "4-1-1-0",
+        "tip": "Padrão: Desça lentamente controlando a força com o posterior."
+      },
+      {
+        "name": "Elevação Pélvica Máquina/Barra",
+        "sets": 3,
+        "reps": "10–12",
+        "rir": 1,
+        "rest": 120,
+        "technique": "Pausa na contração",
+        "cadence": "2-0-1-2",
+        "tip": "Pausa na contração: Segure a ponte no alto contraindo o glúteo por 2 segundos."
+      }
+    ]
+  },
+  "sexta": {
+    "title": "Treino E: Ombros e Abdômen",
+    "subtitle": "Largura clavicular, deltoides 3D e fortalecimento pesado de core.",
+    "exercises": [
+      {
+        "name": "Desenvolvimento Máquina",
+        "sets": 4,
+        "reps": "8–12",
+        "rir": 1,
+        "rest": 120,
+        "technique": "Padrão.",
+        "cadence": "3-0-1-0",
+        "tip": "Padrão."
+      },
+      {
+        "name": "Elevação Lateral na Polia",
+        "sets": 4,
+        "reps": "12–15",
+        "rir": 0,
+        "rest": 90,
+        "technique": "Myo-Reps",
+        "cadence": "2-0-1-0",
+        "tip": "Myo-Reps: Faça a série até perto da falha. Respire 5 vezes e faça mini-séries até não conseguir 3 reps."
+      },
+      {
+        "name": "Elevação Lateral Inclinada",
+        "sets": 3,
+        "reps": "12–15",
+        "rir": 1,
+        "rest": 75,
+        "technique": "Padrão.",
+        "cadence": "2-0-2-0",
+        "tip": "Padrão."
+      },
+      {
+        "name": "Elevação Frontal com Corda (Polia)",
+        "sets": 3,
+        "reps": "10–12",
+        "rir": 0,
+        "rest": 90,
+        "technique": "Rest-Pause",
+        "cadence": "2-0-1-1",
+        "tip": "Rest-Pause: Na última série, vá até a falha, descanse 10 segundos e faça mais repetições até a falha."
+      },
+      {
+        "name": "Abdominal na Polia Alta",
+        "sets": 4,
+        "reps": "10–15",
+        "rir": 0,
+        "rest": 90,
+        "technique": "Progressão de carga",
+        "cadence": "2-1-2-1",
+        "tip": "Progressão de carga: Aumente a placa assim que bater 15 reps."
+      },
+      {
+        "name": "Abdominal Infra Declinado",
+        "sets": 3,
+        "reps": "15–20",
+        "rir": 1,
+        "rest": 75,
+        "technique": "Padrão.",
+        "cadence": "2-0-1-0",
+        "tip": "Padrão."
+      },
+      {
+        "name": "Prancha Frontal",
+        "sets": 3,
+        "reps": "Máx",
+        "rir": 0,
+        "rest": 60,
+        "technique": "Falha isométrica",
+        "cadence": "Isometria",
+        "tip": "Falha isométrica: Segure a posição até não suportar mais."
+      },
+      {
+        "name": "Roda Abdominal (Ab Wheel)",
+        "sets": 3,
+        "reps": "8–15",
+        "rir": 0,
+        "rest": 90,
+        "technique": "Padrão.",
+        "cadence": "4-0-1-0",
+        "tip": "Padrão."
+      }
+    ]
+  },
+  "sabado": {
+    "title": "Descanso ou Recuperação Ativa",
+    "subtitle": "Cardio leve, caminhada ou mobilidade articular.",
+    "exercises": []
+  },
+  "domingo": {
+    "title": "Descanso Total",
+    "subtitle": "Recuperação completa para reiniciar o ciclo com força máxima.",
+    "exercises": []
+  }
+}
